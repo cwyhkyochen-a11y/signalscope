@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+  --color-primary: #10A37F;
+  --color-primary-hover: #0D8C6D;
+  --color-primary-light: #E6F7F2;
+  --color-accent: #1A73E8;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F7F7F8;
+  --color-bg-tertiary: #ECECF1;
+  --color-border: #E5E5E5;
+  --color-border-light: #F0F0F0;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+  --color-text-disabled: #CCCCCC;
+  --color-success: #10A37F;
+  --color-warning: #E8A317;
+  --color-error: #EF4444;
+  --color-info: #1A73E8;
+  --signal-bullish: #10A37F;
+  --signal-bearish: #EF4444;
+  --signal-neutral: #999999;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  margin: 0;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-tertiary) 25%, #f0f0f0 50%, var(--color-bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}

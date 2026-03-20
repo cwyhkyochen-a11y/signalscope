@@ -1,0 +1,39 @@
+{
+  "version": "v1.1.0",
+  "status": "sealed",
+  "project": "signalscope",
+  "startedAt": "2026-03-21T00:12:00+08:00",
+  "sealedAt": "2026-03-21T01:15:00+08:00",
+  "deployedAt": "2026-03-21T00:52:00+08:00",
+  "features": [
+    "YouTube Channel RSS Worker",
+    "PDF upload immediate analysis",
+    "Person-day comprehensive analysis",
+    "JWT secret from env",
+    "Sub-path deployment fix (BASE auto-detection)",
+    "Login flow fix (navigate to dashboard after success)",
+    "401 redirect with dynamic login path"
+  ],
+  "fixes": [
+    "api.ts: BASE='/api' → dynamic getBase() detection for /signalscope sub-path",
+    "api.ts: 401 redirect hard-coded /signalscope/login → dynamic getLoginPath()",
+    "Login.tsx: Added navigate('/dashboard') after successful login",
+    "Login.tsx: Added redirect if already logged in"
+  ],
+  "deployInfo": {
+    "server": "腾讯云 43.163.227.232",
+    "path": "/opt/signalscope/",
+    "port": 3020,
+    "url": "https://kyochen.art/signalscope/",
+    "pm2": "signalscope",
+    "proxy": "Caddy (strip_prefix /signalscope)"
+  },
+  "knownIssues": [
+    "v1.2: Reanalyze button + 已读标记 UI",
+    "v1.2: 立场趋势时间线可视化",
+    "v1.2: Scheduler 改用 Job Queue",
+    "v1.2: 前端 TypeScript 类型收严",
+    "v1.2: 设置页 — 大模型配置（base url / key / name，OpenAI 格式）+ 各平台参数（如 Twitter Bearer Token）",
+    "v1.2: Timeline 仅展示有数据的日期 + 今日概况"
+  ]
+}
