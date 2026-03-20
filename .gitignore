@@ -24,3 +24,10 @@ Thumbs.db
 
 # Misc
 *.tgz
+
+# Internal version archives (contain deployment-specific data)
+versions/
+docs/
+
+# Compiled frontend
+public/assets/
